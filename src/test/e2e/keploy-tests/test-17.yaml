@@ -1,0 +1,60 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-17
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /owners/11/pets/16/edit
+        url_params:
+            birthDate: "2022-07-14"
+            id: "16"
+            name: Rooster
+            type: hamster
+        header:
+            accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8
+            accept-encoding: gzip, deflate, br
+            accept-language: en-GB,en
+            cache-control: max-age=0
+            connection: keep-alive
+            content-length: "52"
+            content-type: application/x-www-form-urlencoded
+            cookie: connect.sid=s%3AQDiXHL7p5PmCBgiCoRKgcPECjh6TS7Ke.sIy6FdXpze457l%2FXjceURxSI9DwkS8VTcqdYztFXi1g; ab.storage.userId.7af503ae-0c84-478f-98b0-ecfff5d67750=%7B%22g%22%3A%226989544%22%2C%22c%22%3A1662096356728%2C%22l%22%3A1662096356730%7D; ab.storage.deviceId.7af503ae-0c84-478f-98b0-ecfff5d67750=%7B%22g%22%3A%22a6b6bd21-b2b0-e451-1c02-9210279ee712%22%2C%22c%22%3A1662096356730%2C%22l%22%3A1662096356730%7D; ab.storage.sessionId.7af503ae-0c84-478f-98b0-ecfff5d67750=%7B%22g%22%3A%2257682c71-75a7-3043-0a9d-78503ccd0687%22%2C%22e%22%3A2163060398284%2C%22c%22%3A1662096356729%2C%22l%22%3A1663060398284%7D; JSESSIONID=8AC8E9DA530D0CD5EB148CF1C2AFB2E7
+            host: localhost:8080
+            origin: http://localhost:8080
+            referer: http://localhost:8080/owners/11/pets/16/edit
+            sec-fetch-dest: document
+            sec-fetch-mode: navigate
+            sec-fetch-site: same-origin
+            sec-fetch-user: ?1
+            sec-gpc: "1"
+            upgrade-insecure-requests: "1"
+            user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+        body: id=16&name=Rooster&birthDate=2022-07-14&type=hamster
+    resp:
+        status_code: 302
+        header:
+            Location: http://localhost:8080/owners/11
+        body: ""
+        status_message: Found
+        proto_major: 1
+        proto_minor: 1
+    objects:
+        - type: error
+          data: H4sIAAAAAAAA/wEAAP//AAAAAAAAAAA=
+    mocks:
+        - test-17-0
+        - test-17-1
+        - test-17-2
+        - test-17-3
+        - test-17-4
+        - test-17-5
+        - test-17-6
+        - test-17-7
+        - test-17-8
+        - test-17-9
+    assertions:
+        noise: []
+    created: 1671528956
