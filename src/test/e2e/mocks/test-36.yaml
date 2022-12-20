@@ -1,0 +1,38 @@
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-36-0
+spec:
+    metadata:
+        SQL-Query: select vet0_.id as id1_5_, vet0_.first_name as first_na2_5_, vet0_.last_name as last_nam3_5_ from vets vet0_ limit ?, ?
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_5_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: first_na2_5_
+              type: String
+              precision: 0
+              scale: 0
+            - name: last_nam3_5_
+              type: String
+              precision: 0
+              scale: 0
+        rows:
+            - '[`6`|`Sharon`|`Jenkins`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-36-1
+spec:
+    metadata:
+        SQL-Query: select specialtie0_.vet_id as vet_id1_4_0_, specialtie0_.specialty_id as specialt2_4_0_, specialty1_.id as id1_2_1_, specialty1_.name as name2_2_1_ from vet_specialties specialtie0_ inner join specialties specialty1_ on specialtie0_.specialty_id=specialty1_.id where specialtie0_.vet_id=?
+        method: next()
+    type: TABLE
+    table:
+        cols: []
+        rows: []
+    int: 0

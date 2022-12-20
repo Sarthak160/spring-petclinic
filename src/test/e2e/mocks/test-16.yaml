@@ -1,0 +1,347 @@
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-0
+spec:
+    metadata:
+        SQL-Query: select owner0_.id as id1_0_0_, pets1_.id as id1_1_1_, owner0_.first_name as first_na2_0_0_, owner0_.last_name as last_nam3_0_0_, owner0_.address as address4_0_0_, owner0_.city as city5_0_0_, owner0_.telephone as telephon6_0_0_, pets1_.name as name2_1_1_, pets1_.birth_date as birth_da3_1_1_, pets1_.type_id as type_id4_1_1_, pets1_.owner_id as owner_id5_1_0__, pets1_.id as id1_1_0__ from owners owner0_ left outer join pets pets1_ on owner0_.id=pets1_.owner_id where owner0_.id=? order by pets1_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_0_0_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: id1_1_1_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: first_na2_0_0_
+              type: String
+              precision: 0
+              scale: 0
+            - name: last_nam3_0_0_
+              type: String
+              precision: 0
+              scale: 0
+            - name: address4_0_0_
+              type: String
+              precision: 0
+              scale: 0
+            - name: city5_0_0_
+              type: String
+              precision: 0
+              scale: 0
+            - name: telephon6_0_0_
+              type: String
+              precision: 0
+              scale: 0
+            - name: name2_1_1_
+              type: String
+              precision: 0
+              scale: 0
+            - name: birth_da3_1_1_
+              type: Date
+              precision: 0
+              scale: 0
+            - name: type_id4_1_1_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: owner_id5_1_0__
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: id1_1_0__
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`11`|`15`|`Chandler`|`Bing`|`Funny Apartments, Tulsa `|`Oklahoma`|`1234567890`|`Dexter`|`2022-11-09`|`2`|`11`|`15`]'
+            - '[`11`|`14`|`NA`|`NA`|`NA`|`NA`|`NA`|`Duck`|`2015-10-14`|`5`|`11`|`14`]'
+            - '[`11`|`16`|`NA`|`NA`|`NA`|`NA`|`NA`|`Roooster`|`2022-07-14`|`6`|`11`|`16`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-1
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_0_, pettype0_.name as name2_3_0_ from types pettype0_ where pettype0_.id=?
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: name2_3_0_
+              type: String
+              precision: 0
+              scale: 0
+        rows:
+            - '[`dog`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-2
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_0_, pettype0_.name as name2_3_0_ from types pettype0_ where pettype0_.id=?
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: name2_3_0_
+              type: String
+              precision: 0
+              scale: 0
+        rows:
+            - '[`bird`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-3
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_0_, pettype0_.name as name2_3_0_ from types pettype0_ where pettype0_.id=?
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: name2_3_0_
+              type: String
+              precision: 0
+              scale: 0
+        rows:
+            - '[`hamster`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-4
+spec:
+    metadata:
+        SQL-Query: select visits0_.pet_id as pet_id4_6_0_, visits0_.id as id1_6_0_, visits0_.id as id1_6_1_, visits0_.visit_date as visit_da2_6_1_, visits0_.description as descript3_6_1_ from visits visits0_ where visits0_.pet_id=? order by visits0_.visit_date asc
+        method: next()
+    type: TABLE
+    table:
+        cols: []
+        rows: []
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-5
+spec:
+    metadata:
+        SQL-Query: select visits0_.pet_id as pet_id4_6_0_, visits0_.id as id1_6_0_, visits0_.id as id1_6_1_, visits0_.visit_date as visit_da2_6_1_, visits0_.description as descript3_6_1_ from visits visits0_ where visits0_.pet_id=? order by visits0_.visit_date asc
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_6_1_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: visit_da2_6_1_
+              type: Date
+              precision: 0
+              scale: 0
+            - name: descript3_6_1_
+              type: String
+              precision: 0
+              scale: 0
+            - name: pet_id4_6_0_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: id1_6_0_
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`5`|`2022-12-22`|`Dont know`|`14`|`5`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-6
+spec:
+    metadata:
+        SQL-Query: select visits0_.pet_id as pet_id4_6_0_, visits0_.id as id1_6_0_, visits0_.id as id1_6_1_, visits0_.visit_date as visit_da2_6_1_, visits0_.description as descript3_6_1_ from visits visits0_ where visits0_.pet_id=? order by visits0_.visit_date asc
+        method: next()
+    type: TABLE
+    table:
+        cols: []
+        rows: []
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-7
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_, pettype0_.name as name2_3_ from types pettype0_ order by pettype0_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_3_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: name2_3_
+              type: String
+              precision: 0
+              scale: 0
+        rows:
+            - '[`5`|`bird`]'
+            - '[`1`|`cat`]'
+            - '[`2`|`dog`]'
+            - '[`6`|`hamster`]'
+            - '[`3`|`lizard`]'
+            - '[`4`|`snake`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-8
+spec:
+    metadata:
+        SQL-Query: select owner0_.id as id1_0_0_, pets1_.id as id1_1_1_, owner0_.first_name as first_na2_0_0_, owner0_.last_name as last_nam3_0_0_, owner0_.address as address4_0_0_, owner0_.city as city5_0_0_, owner0_.telephone as telephon6_0_0_, pets1_.name as name2_1_1_, pets1_.birth_date as birth_da3_1_1_, pets1_.type_id as type_id4_1_1_, pets1_.owner_id as owner_id5_1_0__, pets1_.id as id1_1_0__ from owners owner0_ left outer join pets pets1_ on owner0_.id=pets1_.owner_id where owner0_.id=? order by pets1_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_0_0_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: id1_1_1_
+              type: Integer
+              precision: 0
+              scale: 0
+            - name: owner_id5_1_0__
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`11`|`15`|`11`]'
+            - '[`11`|`14`|`11`]'
+            - '[`11`|`16`|`11`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-9
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_, pettype0_.name as name2_3_ from types pettype0_ order by pettype0_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_3_
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`5`]'
+            - '[`1`]'
+            - '[`2`]'
+            - '[`6`]'
+            - '[`3`]'
+            - '[`4`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-10
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_, pettype0_.name as name2_3_ from types pettype0_ order by pettype0_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_3_
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`5`]'
+            - '[`1`]'
+            - '[`2`]'
+            - '[`6`]'
+            - '[`3`]'
+            - '[`4`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-11
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_, pettype0_.name as name2_3_ from types pettype0_ order by pettype0_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_3_
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`5`]'
+            - '[`1`]'
+            - '[`2`]'
+            - '[`6`]'
+            - '[`3`]'
+            - '[`4`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-12
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_, pettype0_.name as name2_3_ from types pettype0_ order by pettype0_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_3_
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`5`]'
+            - '[`1`]'
+            - '[`2`]'
+            - '[`6`]'
+            - '[`3`]'
+            - '[`4`]'
+    int: 0
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-16-13
+spec:
+    metadata:
+        SQL-Query: select pettype0_.id as id1_3_, pettype0_.name as name2_3_ from types pettype0_ order by pettype0_.name
+        method: next()
+    type: TABLE
+    table:
+        cols:
+            - name: id1_3_
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`5`]'
+            - '[`1`]'
+            - '[`2`]'
+            - '[`6`]'
+            - '[`3`]'
+            - '[`4`]'
+    int: 0

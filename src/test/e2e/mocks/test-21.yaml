@@ -1,0 +1,18 @@
+version: api.keploy.io/v1beta1
+kind: SQL
+name: test-21-0
+spec:
+    metadata:
+        SQL-Query: insert into owners (first_name, last_name, address, city, telephone) values (?, ?, ?, ?, ?)
+        getColumnCount: "1"
+        method: close()
+    type: TABLE
+    table:
+        cols:
+            - name: "1"
+              type: Integer
+              precision: 0
+              scale: 0
+        rows:
+            - '[`12`]'
+    int: 0
